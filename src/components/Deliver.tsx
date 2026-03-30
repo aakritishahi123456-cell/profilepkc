@@ -3,26 +3,62 @@
 import { Globe, Bot, Zap, Code2 } from 'lucide-react'
 
 const deliverables = [
-  { icon: Globe, title: 'Scalable Web Applications', description: 'Building robust architectures that grow with your business.' },
-  { icon: Bot, title: 'AI-Powered Automation', description: 'Intelligent tools that streamline workflows and boost productivity.' },
-  { icon: Zap, title: 'Fast, Optimized Performance', description: 'Lightning-fast load times and optimized user experiences.' },
-  { icon: Code2, title: 'Clean, Maintainable Code', description: 'Well-structured code that\'s easy to maintain and extend.' },
+  {
+    icon: Globe,
+    title: 'Premium business websites',
+    description:
+      'Elegant websites that immediately feel credible and make your services easier to buy.',
+  },
+  {
+    icon: Bot,
+    title: 'AI-enhanced workflows',
+    description:
+      'Useful automation and AI features that reduce manual work instead of adding gimmicks.',
+  },
+  {
+    icon: Zap,
+    title: 'Fast, responsive experience',
+    description:
+      'Sharp interactions, smooth motion, and mobile-friendly layouts that feel professionally made.',
+  },
+  {
+    icon: Code2,
+    title: 'Clean build quality',
+    description:
+      'A maintainable codebase that is ready for updates, scale, and future collaboration.',
+  },
 ]
 
 export default function Deliver() {
   return (
     <section className="py-16 md:py-24">
       <div className="max-w-5xl mx-auto px-4 md:px-6">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8 md:mb-12">What I Deliver</h2>
-        
+        <div className="text-center mb-10 md:mb-14">
+          <div className="section-label mx-auto mb-4">What Clients Get</div>
+          <h2 className="display-font text-3xl md:text-5xl font-semibold mb-4 tracking-[-0.03em]">
+            Design that earns trust. Engineering that backs it up.
+          </h2>
+          <p className="mx-auto max-w-2xl text-slate-400 text-base md:text-lg">
+            The goal is not just a nice-looking site. It is a site that feels premium, explains
+            your value quickly, and helps you win better conversations.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {deliverables.map((item) => (
-            <div key={item.title} className="p-4 md:p-6 rounded-xl border border-white/10 hover:border-white/20 transition-colors">
+            <div
+              key={item.title}
+              className="glass-panel p-5 md:p-6 rounded-[1.5rem] hover:-translate-y-1 transition-all duration-300"
+            >
               <div className="flex items-start gap-3 md:gap-4">
-                <item.icon className="w-5 md:w-6 h-5 md:h-6 text-gray-400 mt-0.5" />
+                <div className="rounded-2xl border border-white/8 bg-white/[0.04] p-3">
+                  <item.icon className="w-5 md:w-6 h-5 md:h-6 text-[#c8f169] mt-0.5" />
+                </div>
                 <div>
-                  <h3 className="font-medium text-sm md:text-base mb-1 md:mb-2">{item.title}</h3>
-                  <p className="text-xs md:text-sm text-gray-400">{item.description}</p>
+                  <h3 className="font-semibold text-base md:text-lg mb-2 text-white">{item.title}</h3>
+                  <p className="text-sm md:text-base text-slate-400 leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
               </div>
             </div>

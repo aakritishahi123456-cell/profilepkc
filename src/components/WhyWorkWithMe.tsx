@@ -11,7 +11,8 @@ const features = [
       </svg>
     ),
     title: 'Ship Fast',
-    description: 'I deliver production-ready systems quickly without compromising quality or scalability.',
+    description:
+      'I deliver production-ready systems quickly without compromising quality or scalability.',
   },
   {
     icon: (
@@ -21,7 +22,8 @@ const features = [
       </svg>
     ),
     title: 'Business Focused',
-    description: 'I align technical decisions with real business outcomes and measurable results.',
+    description:
+      'I align technical decisions with real business outcomes and measurable results.',
   },
   {
     icon: (
@@ -30,7 +32,8 @@ const features = [
       </svg>
     ),
     title: 'Clean Code',
-    description: 'Production-ready, maintainable code that your team can build upon with confidence.',
+    description:
+      'Production-ready, maintainable code that your team can build upon with confidence.',
   },
   {
     icon: (
@@ -51,11 +54,13 @@ export default function WhyWorkWithMe() {
       <div className="max-w-7xl mx-auto">
         <ScrollReveal direction="fadeScale" duration={0.8}>
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <div className="section-label mx-auto mb-4">Why Clients Choose Me</div>
+            <h2 className="display-font text-4xl md:text-5xl font-bold mb-4 tracking-[-0.03em]">
               <span className="text-gradient">Why Work With Me</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              I bring a unique combination of speed, quality, and business acumen to every project.
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              I combine presentation, engineering, and business thinking so your website does more
+              than exist. It helps you sell.
             </p>
           </div>
         </ScrollReveal>
@@ -70,25 +75,20 @@ export default function WhyWorkWithMe() {
               glow
             >
               <motion.div
-                className="relative p-6 rounded-2xl bg-white/[0.03] backdrop-blur-sm border border-white/5 hover:border-cyan-500/20 transition-all duration-300 group h-full"
+                className="glass-panel relative p-6 rounded-2xl hover:border-[#c8f169]/20 transition-all duration-300 group h-full"
                 whileHover={{ y: -5, scale: 1.02 }}
               >
-                {/* Glow effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Icon */}
-                <div className="relative z-10 mb-4 inline-flex p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#74f2ce]/10 to-[#c8f169]/8 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                <div className="relative z-10 mb-4 inline-flex p-3 rounded-xl bg-gradient-to-br from-[#74f2ce]/15 to-[#c8f169]/15 text-[#c8f169] group-hover:text-[#f1ffd1] transition-colors">
                   {feature.icon}
                 </div>
 
-                {/* Content */}
                 <div className="relative z-10">
-                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-cyan-100 transition-colors">
+                  <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-[#f1ffd1] transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
+                  <p className="text-slate-400 text-sm leading-relaxed">{feature.description}</p>
                 </div>
               </motion.div>
             </ScrollReveal>
